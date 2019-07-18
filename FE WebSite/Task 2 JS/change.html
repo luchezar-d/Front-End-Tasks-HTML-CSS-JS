@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	body{
+		margin: 0;
+	}
+		.wrapper{
+			height: 300px;
+			width: 100%;
+			position: absolute;
+			top: 40%;
+			left: 17%;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<select  id="selection" style="float: left;margin: 40px;" onchange="checkSelection()">
+			<option value="True">True</option>
+			<option value="False">False</option>
+		</select>
+		<p id="firstPart" style="float: left;font-size: 30px;">Ако ме изберат за примиер</p><p id="secondPart" style="float: left;font-size: 30px; padding-left: 5px;"> ще построя магистрала</p>
+		<select id="selection2" name="cars" style="float: left;margin: 40px;" onchange="checkSelection2()">
+			<option value="True">True</option>
+			<option value="False">False</option>
+		</select>
+	</div>
+	<script>
+		var firstPart = document.getElementById("firstPart");
+
+		function checkSelection() {
+			if (selection.value == 'False') {
+				firstPart.innerHTML = "Ако не ме изберат за примиер";
+			}
+		}
+
+		var secondPart = document.getElementById("secondPart");
+
+		function checkSelection2() {
+			if (selection2.value == 'False') {
+				secondPart.innerHTML = "няма да построя нова магистрала";
+			}
+		}
+	</script>
+</body>
+</html>

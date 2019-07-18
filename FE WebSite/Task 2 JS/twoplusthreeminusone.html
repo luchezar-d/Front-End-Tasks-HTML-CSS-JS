@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>JavaScript Array Sort</h2>
+
+	<p>Click the buttons to sort car objects on age.</p>
+
+	<button onclick="myFunction1()">calculate</button>
+	<button onclick="myFunction2(2,3,1)">calculate</button>
+
+	<p id="demo"></p>
+	<p id="demo1">adsad</p>
+
+	<script>
+		var a = 2;
+		var b = 3;
+		var c = 1;
+		var result;
+		function myFunction1() {
+			document.getElementById('demo').innerHTML = result;
+			result = (a + b) - c;
+		}
+
+		function myFunction2(f,s,l) {
+			var final;
+			final = (f + s) - l;
+			return document.getElementById('demo1').innerHTML = final;
+		}
+
+//annonymous
+		(function () {
+			result = (a + b) - c;
+		})();
+	</script>
+
+</body>
+</html>

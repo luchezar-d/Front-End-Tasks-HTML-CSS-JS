@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Click the button to get the average temperature for two weeks.</h1>
+
+<button onclick="average()">Average</button>
+<button onclick="average1()">Average for first week</button>
+<button onclick="average2()">Average for first week</button>
+<button onclick="difference()">Difference</button>
+<p id="demo"></p>
+<p>Средно аритметично на ^</p>
+<h1 id="demo2"></h1>
+<h2>През първата седмица средната температура ще бъде : </h2>
+<h1 id="demo3"></h1>
+<h2>През втората седмица средната температура ще бъде : </h2>
+<h1 id="demo4"></h1>
+<h2>Разликата в дните е : </h2>
+<p>Понеделник</p>
+<h1 id="demo5"></h1>
+<p>Вторник</p>
+<h1 id="demo6"></h1>
+<p>Сряда</p>
+<h1 id="demo7"></h1>
+<p>Четвъртък</p>
+<h1 id="demo8"></h1>
+<p>Петък</p>
+<h1 id="demo9"></h1>
+<p>Събота</p>
+<h1 id="demo10"></h1>
+<p>Неделя</p>
+<h1 id="demo11"></h1>
+<script>
+var arr = [
+		{date: '01.01.2015', temperature: 33.3},
+		{date: '02.01.2015', temperature: 20.2},
+		{date: '03.03.2015', temperature: 18.3},
+		{date: '04.01.2015', temperature: 22.2},
+		{date: '05.01.2015', temperature: 30.0},
+		{date: '06.01.2015', temperature: 10.2},
+		{date: '07.01.2015', temperature: 40.2},
+		{date: '08.01.2015', temperature: 22.3},
+		{date: '09.01.2015', temperature: 23.2},
+		{date: '10.01.2015', temperature: 24.2},
+		{date: '11.01.2015', temperature: 25.2},
+		{date: '12.01.2015', temperature: 30.2},
+		{date: '13.01.2015', temperature: 31.2},
+		{date: '14.01.2015', temperature: 10.2},
+		{date: '14.02.2015', temperature: 10.2},
+];
+displayCars();
+function difference() {
+  //arr.sort();
+  document.getElementById('demo5').innerHTML = (arr[0].temperature);
+  document.getElementById('demo6').innerHTML = (arr[1].temperature - arr[0].temperature);
+  document.getElementById('demo7').innerHTML = (arr[2].temperature - arr[1].temperature);
+  document.getElementById('demo8').innerHTML = (arr[3].temperature - arr[2].temperature);
+  document.getElementById('demo9').innerHTML = (arr[4].temperature - arr[3].temperature);
+  document.getElementById('demo10').innerHTML = (arr[5].temperature - arr[4].temperature);
+  document.getElementById('demo11').innerHTML = (arr[6].temperature - arr[5].temperature);
+
+};
+function average2() {
+  //arr.sort();
+  document.getElementById('demo4').innerHTML = ((arr[7].temperature + arr[8].temperature + arr[9].temperature + arr[10].temperature + arr[11].temperature + arr[12].temperature + arr[13].temperature) / 7);
+
+};
+function average1() {
+  //arr.sort();
+  document.getElementById('demo3').innerHTML = ((arr[0].temperature + arr[1].temperature + arr[2].temperature + arr[3].temperature + arr[4].temperature + arr[5].temperature + arr[6].temperature) / 7);
+
+};
+function average() {
+  //arr.sort();
+  document.getElementById('demo2').innerHTML = (arr[0].temperature + arr[1].temperature + arr[2].temperature + arr[3].temperature + arr[4].temperature + arr[5].temperature + arr[6].temperature + arr[7].temperature + arr[8].temperature + arr[9].temperature + arr[10].temperature + arr[11].temperature + arr[12].temperature + arr[13].temperature) / 14;
+
+};
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  arr[0].date + " : " + arr[0].temperature + "<br>" +
+  arr[1].date + " : " + arr[1].temperature + "<br>" +
+  arr[2].date + " : " + arr[2].temperature + "<br>" +
+  arr[3].date + " : " + arr[3].temperature + "<br>" +
+  arr[4].date + " : " + arr[4].temperature + "<br>" +
+  arr[5].date + " : " + arr[5].temperature + "<br>" +
+  arr[6].date + " : " + arr[6].temperature + "<br>" +
+  arr[7].date + " : " + arr[7].temperature + "<br>" +
+  arr[8].date + " : " + arr[8].temperature + "<br>" +
+  arr[9].date + " : " + arr[9].temperature + "<br>" +
+  arr[10].date + " : " + arr[10].temperature + "<br>" +
+  arr[11].date + " : " + arr[11].temperature + "<br>" +
+  arr[12].date + " : " + arr[12].temperature + "<br>" +
+  arr[13].date + " : " + arr[13].temperature + "<br>" +
+  arr[14].date + " : " + arr[14].temperature
+  ;}
+</script>
+
+</body>
+</html>

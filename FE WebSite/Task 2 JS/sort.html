@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the buttons to sort car objects on age.</p>
+
+<button onclick="myFunction()">Sort</button>
+
+<p id="demo"></p>
+
+<script>
+var arr = [
+		{date: '10.01.2017', dayOfWeek: 'Tuesday'},
+		{date: '05.11.2016', dayOfWeek: 'Saturday'},
+		{date: '21.13.2002', dayOfWeek: 'Monday'}
+];
+displayCars();
+
+function myFunction() {
+  arr.sort();
+  displayCars();
+}
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  arr[0].date + " " + arr[0].dayOfWeek + "<br>" +
+  arr[1].date + " " + arr[1].dayOfWeek + "<br>" +
+  arr[2].date + " " + arr[2].dayOfWeek;
+}
+</script>
+
+</body>
+</html>
